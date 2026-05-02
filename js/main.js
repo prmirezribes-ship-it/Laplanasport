@@ -1,176 +1,162 @@
 /* ═══════════════════════════════════════════════════════
-   LA PLANA SPORT — JavaScript
+   LA PLANA TENNIS ACADEMY — Main JS
 ═══════════════════════════════════════════════════════ */
 
 (function () {
   'use strict';
 
-  /* ── Navbar scroll effect ─────────────────────────── */
-  const navbar = document.getElementById('navbar');
+  /* ── Navbar ──────────────────────────────────────── */
+  const navbar  = document.getElementById('navbar');
+  const burger  = document.getElementById('navBurger');
+  const navMenu = document.getElementById('navLinks');
 
-  function updateNavbar() {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  function syncNavbar() {
+    navbar.classList.toggle('scrolled', window.scrollY > 56);
   }
-  window.addEventListener('scroll', updateNavbar, { passive: true });
-  updateNavbar();
+  window.addEventListener('scroll', syncNavbar, { passive: true });
+  syncNavbar();
 
-
-  /* ── Mobile menu ──────────────────────────────────── */
-  const toggle = document.getElementById('navToggle');
-  const menu   = document.getElementById('navMenu');
-
-  toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    toggle.classList.toggle('active', open);
-    toggle.setAttribute('aria-expanded', String(open));
+  burger.addEventListener('click', () => {
+    const open = navMenu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  // Close on link click
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      toggle.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMenu);
   });
-
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (menu.classList.contains('open') &&
-        !menu.contains(e.target) &&
-        !toggle.contains(e.target)) {
-      menu.classList.remove('open');
-      toggle.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
+  document.addEventListener('click', e => {
+    if (navMenu.classList.contains('open') &&
+        !navMenu.contains(e.target) &&
+        !burger.contains(e.target)) closeMenu();
   });
-
-
-  /* ── Scroll reveal ────────────────────────────────── */
-  const revealEls = document.querySelectorAll('.reveal');
-
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          // Stagger siblings in the same grid
-          const delay = getSiblingIndex(entry.target) * 80;
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, delay);
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  revealEls.forEach(el => revealObserver.observe(el));
-
-  function getSiblingIndex(el) {
-    const parent = el.parentElement;
-    const siblings = Array.from(parent.children).filter(c => c.classList.contains('reveal'));
-    return siblings.indexOf(el);
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   }
 
 
-  /* ── Active nav link on scroll ────────────────────── */
-  const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  /* ── Active nav link ────────────────────────────── */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nl');
 
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-          });
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
-
-  sections.forEach(s => sectionObserver.observe(s));
-
-
-  /* ── Contact form ─────────────────────────────────── */
-  const form    = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Enviando…';
-
-      // Simulate send
-      setTimeout(() => {
-        success.classList.add('visible');
-        form.reset();
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i>&nbsp; Enviar mensaje';
-        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 1400);
+  const sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l =>
+          l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`)
+        );
+      }
     });
-  }
+  }, { threshold: 0.45 });
+
+  sections.forEach(s => sectionObs.observe(s));
 
 
-  /* ── Smooth scroll for anchor links ──────────────── */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const targetId = anchor.getAttribute('href');
-      if (targetId === '#') return;
-      const target = document.querySelector(targetId);
+  /* ── Smooth scroll ───────────────────────────────── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const offset = navbar.offsetHeight + 8;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      const offset = navbar.offsetHeight + 12;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
     });
   });
 
 
-  /* ── Counter animation for hero stats ────────────── */
-  const statsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounters();
-          statsObserver.disconnect();
-        }
+  /* ── Scroll reveal ──────────────────────────────── */
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el   = entry.target;
+      const idx  = getStaggerIndex(el);
+      const delay = Math.min(idx * 90, 400);
+      setTimeout(() => el.classList.add('in'), delay);
+      revealObs.unobserve(el);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  function getStaggerIndex(el) {
+    const parent = el.parentElement;
+    return Array.from(parent.children)
+      .filter(c => c.classList.contains('reveal'))
+      .indexOf(el);
+  }
+
+
+  /* ── Hero counter animation ─────────────────────── */
+  const heroNums = document.querySelector('.hero-numbers');
+  if (heroNums) {
+    let ran = false;
+    const counterObs = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting || ran) return;
+      ran = true;
+      document.querySelectorAll('.hn-n[data-target]').forEach(el => {
+        animateCount(el, parseInt(el.dataset.target, 10), el.textContent.replace(/\d/g, ''));
       });
-    },
-    { threshold: 0.5 }
-  );
+    }, { threshold: 0.6 });
+    counterObs.observe(heroNums);
+  }
 
-  const statsEl = document.querySelector('.hero-stats');
-  if (statsEl) statsObserver.observe(statsEl);
+  function animateCount(el, target, suffix) {
+    const duration = 1400;
+    const fps = 60;
+    const steps = Math.round(duration / (1000 / fps));
+    let current = 0;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      current = Math.round(easeOut(step / steps) * target);
+      el.textContent = current + suffix;
+      if (step >= steps) {
+        el.textContent = target + suffix;
+        clearInterval(timer);
+      }
+    }, 1000 / fps);
+  }
 
-  function animateCounters() {
-    document.querySelectorAll('.hs-num').forEach(el => {
-      const raw    = el.textContent.replace(/[^0-9]/g, '');
-      const suffix = el.textContent.replace(/[0-9]/g, '');
-      const target = parseInt(raw, 10);
-      if (isNaN(target)) return;
+  function easeOut(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
 
-      let start = 0;
-      const duration = 1200;
-      const step = 16;
-      const increment = target / (duration / step);
 
-      const timer = setInterval(() => {
-        start = Math.min(start + increment, target);
-        el.textContent = Math.round(start) + suffix;
-        if (start >= target) clearInterval(timer);
-      }, step);
+  /* ── Contact form ────────────────────────────────── */
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const suc = document.getElementById('cfSuccess');
+      btn.disabled = true;
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Enviando…';
+      setTimeout(() => {
+        suc.classList.add('show');
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = orig;
+        suc.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
     });
   }
+
+
+  /* ── Hover lift on pricing cards ───────────────── */
+  document.querySelectorAll('.prog-card, .price-card, .why-item').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.willChange = 'transform';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.willChange = '';
+    });
+  });
 
 })();

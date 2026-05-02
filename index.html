@@ -3,867 +3,598 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="La Plana Sport – Club de Tenis de alto nivel en Castellón de la Plana. Escuela de tenis, instalaciones de primer nivel y restaurante mediterráneo.">
-  <title>La Plana Sport | Club de Tenis · Castellón de la Plana</title>
+  <meta name="description" content="La Plana Tennis Academy – La academia de tenis de referencia en Castellón. 14 pistas, entrenadores especializados, programas para todas las edades y niveles.">
+  <meta property="og:title" content="La Plana Tennis Academy · Castellón">
+  <meta property="og:description" content="Academia de tenis de referencia en Castellón. Programas para todas las edades y niveles en las mejores instalaciones.">
+  <title>La Plana Tennis Academy · Castellón de la Plana</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════
-       NAVEGACIÓN
-  ═══════════════════════════════════════════ -->
+  <!-- ════════════════════════════════
+       NAVBAR
+  ════════════════════════════════ -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
+    <div class="nav-wrap">
 
       <a href="#inicio" class="nav-logo">
-        <svg class="logo-svg" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
-          <path d="M 6 18 Q 28 8 50 18" fill="none" stroke="#C9A84C" stroke-width="2"/>
-          <path d="M 6 38 Q 28 48 50 38" fill="none" stroke="#C9A84C" stroke-width="2"/>
-          <line x1="28" y1="2" x2="28" y2="54" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
-        </svg>
-        <div class="logo-text">
-          <span class="logo-main">LA PLANA</span>
-          <span class="logo-sub">SPORT</span>
+        <!-- Real logo: place img/logo.png with the actual file -->
+        <img src="img/logo.png" alt="La Plana Sport" class="logo-real" onerror="this.parentElement.classList.add('logo-fallback-active')">
+        <div class="logo-svg-wrap" aria-hidden="true">
+          <svg viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <!-- Figure -->
+            <circle cx="36" cy="14" r="6.5" fill="#8DBD1F"/>
+            <path d="M36 21 Q29 34 27 43" stroke="#8DBD1F" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <path d="M34 27 L19 21 L17 14" stroke="#8DBD1F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="15" cy="11" rx="6.5" ry="4.5" stroke="#8DBD1F" stroke-width="2.5" fill="none"/>
+            <path d="M27 43 L20 56 M27 43 L34 55" stroke="#8DBD1F" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <!-- Text -->
+            <text x="54" y="26" font-family="Montserrat,sans-serif" font-weight="800" font-size="18" fill="white" letter-spacing="-0.3">La Plana</text>
+            <text x="54" y="40" font-family="Montserrat,sans-serif" font-weight="700" font-size="13" fill="white">sport</text>
+            <text x="54" y="52" font-family="Montserrat,sans-serif" font-weight="500" font-size="8.5" fill="#999" letter-spacing="2">CASTELLÓN</text>
+          </svg>
         </div>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav-burger" id="navBurger" aria-label="Menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#historia"      class="nav-link">Historia</a></li>
-        <li><a href="#jugadores"     class="nav-link">Palmarés</a></li>
-        <li><a href="#escuela"       class="nav-link">Escuela</a></li>
-        <li><a href="#instalaciones" class="nav-link">Instalaciones</a></li>
-        <li><a href="#restaurante"   class="nav-link">Restaurante</a></li>
-        <li><a href="#contacto"      class="nav-link">Contacto</a></li>
-        <li><a href="#contacto"      class="nav-cta">Hazte Socio</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#academia" class="nl">Academia</a></li>
+        <li><a href="#programas" class="nl">Programas</a></li>
+        <li><a href="#precios" class="nl">Precios</a></li>
+        <li><a href="#instalaciones" class="nl">Instalaciones</a></li>
+        <li><a href="#contacto" class="nl nl-cta">Inscríbete</a></li>
       </ul>
-
     </div>
   </nav>
 
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ════════════════════════════════
        HERO
-  ═══════════════════════════════════════════ -->
+  ════════════════════════════════ -->
   <section class="hero" id="inicio">
+    <!-- Replace img/hero.jpg with a real photo of the club for best results -->
     <div class="hero-bg"></div>
-    <div class="hero-court-art" aria-hidden="true">
-      <div class="court-outer">
-        <div class="court-inner">
-          <div class="court-net"></div>
-          <div class="court-service-left"></div>
-          <div class="court-service-right"></div>
-          <div class="court-center-mark"></div>
-        </div>
-      </div>
-    </div>
+    <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-      <div class="hero-badge">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Fundado en 1985 · Castellón de la Plana</span>
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        Castellón de la Plana · Avda. Hermanos Bou, 242
       </div>
-      <h1 class="hero-title">
-        Donde se forjan<br>
-        <em>los campeones</em>
+
+      <h1 class="hero-h1">
+        Entrena donde<br>
+        <em>se forjan</em> los<br>
+        campeones
       </h1>
-      <p class="hero-subtitle">
-        Más de 40 años de excelencia tenística en el corazón de Castellón.<br>
-        Club de referencia en la Comunitat Valenciana.
+
+      <p class="hero-p">
+        La academia de tenis de referencia en Castellón.<br>
+        14 pistas, entrenadores de élite y programas para todas las edades.
       </p>
-      <div class="hero-actions">
-        <a href="#escuela"       class="btn btn-gold">Únete a la Escuela</a>
-        <a href="#instalaciones" class="btn btn-outline-white">Descubre el Club</a>
+
+      <div class="hero-btns">
+        <a href="#programas" class="btn btn-green">Ver programas</a>
+        <a href="#contacto"  class="btn btn-ghost">Contáctanos</a>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hs-num">500+</span>
-          <span class="hs-lbl">Socios</span>
+
+      <div class="hero-numbers">
+        <div class="hn-item">
+          <span class="hn-n" data-target="14">0</span>
+          <span class="hn-l">Pistas de tenis</span>
         </div>
-        <div class="hs-divider"></div>
-        <div class="hero-stat">
-          <span class="hs-num">10</span>
-          <span class="hs-lbl">Pistas</span>
+        <div class="hn-sep"></div>
+        <div class="hn-item">
+          <span class="hn-n" data-target="9">0</span>
+          <span class="hn-l">Pistas de pádel</span>
         </div>
-        <div class="hs-divider"></div>
-        <div class="hero-stat">
-          <span class="hs-num">40</span>
-          <span class="hs-lbl">Años</span>
+        <div class="hn-sep"></div>
+        <div class="hn-item">
+          <span class="hn-n" data-target="500">0</span>
+          <span class="hn-l">Alumnos/año</span>
         </div>
-        <div class="hs-divider"></div>
-        <div class="hero-stat">
-          <span class="hs-num">15+</span>
-          <span class="hs-lbl">Campeones</span>
+        <div class="hn-sep"></div>
+        <div class="hn-item">
+          <span class="hn-n" data-target="40">0</span>
+          <span class="hn-l">Años de historia</span>
         </div>
       </div>
     </div>
 
-    <a href="#historia" class="hero-scroll" aria-label="Bajar al contenido">
-      <span>Descubre más</span>
-      <div class="scroll-ring"><i class="fas fa-chevron-down"></i></div>
+    <a href="#academia" class="hero-scroll-cue" aria-label="Bajar">
+      <i class="fas fa-chevron-down"></i>
     </a>
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       HISTORIA
-  ═══════════════════════════════════════════ -->
-  <section class="section sec-light" id="historia">
+  <!-- ════════════════════════════════
+       ACADEMIA (ABOUT)
+  ════════════════════════════════ -->
+  <section class="section s-light" id="academia">
     <div class="container">
+      <div class="about-grid">
 
-      <div class="sec-header">
-        <span class="sec-tag">Nuestra Historia</span>
-        <h2 class="sec-title">Cuatro décadas de <em>pasión por el tenis</em></h2>
-        <p class="sec-sub">Desde nuestros humildes inicios hasta convertirnos en uno de los clubes más prestigiosos de la Comunitat Valenciana, la historia de La Plana Sport es la historia del tenis castellonense.</p>
-      </div>
-
-      <div class="historia-layout">
-
-        <div class="historia-text reveal">
-          <p>En el año <strong>1985</strong>, un grupo de apasionados del tenis de Castellón de la Plana decidió crear un espacio donde el deporte de la raqueta pudiera florecer con la excelencia que merece la capital de la Plana Alta.</p>
-          <p>Lo que comenzó con <strong>cuatro pistas de tierra batida</strong> y un pequeño club social se ha convertido hoy en uno de los centros deportivos de referencia del Mediterráneo, con instalaciones de primer nivel y una cantera que ha dado jugadores al circuito ATP y WTA.</p>
-          <p>A lo largo de estas cuatro décadas, La Plana Sport ha sido testigo y protagonista del crecimiento del tenis valenciano, organizando torneos de nivel nacional, acogiendo a jugadores de élite y, sobre todo, formando a centenares de deportistas que llevan el nombre de Castellón por todo el mundo.</p>
-          <blockquote class="historia-quote">
-            <p>"La Plana Sport no es solo un club de tenis. Es una familia, una escuela de vida, el lugar donde se aprende a competir con pasión y a ganar con humildad."</p>
-            <cite>— Manolo Aparici, Presidente Fundador</cite>
-          </blockquote>
-        </div>
-
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-year">1985</div>
-            <div class="tl-body">
-              <h3>Fundación del Club</h3>
-              <p>Inauguración con 4 pistas de tierra batida y 80 socios fundadores en el corazón de Castellón.</p>
+        <div class="about-text reveal">
+          <span class="eyebrow">Sobre la Academia</span>
+          <h2>Más que un club.<br>Una <em>comunidad</em>.</h2>
+          <p>La Plana Tennis Academy es la escuela oficial de tenis de La Plana Sport Castellón, el club de referencia de la provincia. Operamos en unas instalaciones únicas con <strong>14 pistas de tenis</strong> en perfectas condiciones, entrenadores especializados y una metodología que equilibra técnica, competición y disfrute.</p>
+          <p>Trabajamos con grupos reducidos y programas adaptados a cada perfil, desde los primeros golpes de los más pequeños hasta los entrenamientos de alta competición. Nuestra filosofía es simple: que cada alumno alcance su máximo nivel mientras disfruta del camino.</p>
+          <div class="about-certs">
+            <div class="cert-item">
+              <i class="fas fa-award"></i>
+              <span>Entrenadores titulados RFET</span>
+            </div>
+            <div class="cert-item">
+              <i class="fas fa-users"></i>
+              <span>Grupos reducidos</span>
+            </div>
+            <div class="cert-item">
+              <i class="fas fa-trophy"></i>
+              <span>Programa de competición federada</span>
             </div>
           </div>
-          <div class="tl-item reveal">
-            <div class="tl-year">1992</div>
-            <div class="tl-body">
-              <h3>Primera Gran Expansión</h3>
-              <p>Ampliación a 8 pistas y construcción del edificio social con restaurante y vestuarios premium.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-year">1998</div>
-            <div class="tl-body">
-              <h3>Primer Campeón Nacional</h3>
-              <p>Carlos Herrero, formado íntegramente en nuestra escuela, conquista el Campeonato de España Juvenil.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-year">2003</div>
-            <div class="tl-body">
-              <h3>Pistas Cubiertas</h3>
-              <p>Inauguración de las 2 pistas cubiertas climatizadas, permitiendo entrenar todo el año sin condicionantes.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-year">2010</div>
-            <div class="tl-body">
-              <h3>Academia de Alto Rendimiento</h3>
-              <p>Creación del programa élite con preparadores físicos, psicólogos deportivos y nutricionistas.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-year">2015</div>
-            <div class="tl-body">
-              <h3>Club del Año – FTCV</h3>
-              <p>La Federación de Tenis de la Comunitat Valenciana nos reconoce como Club del Año por nuestra labor formativa.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-year">2022</div>
-            <div class="tl-body">
-              <h3>Renovación Total</h3>
-              <p>Nueva piscina olímpica, gimnasio Technogym de última generación y renovación integral del restaurante.</p>
-            </div>
-          </div>
+          <a href="#programas" class="btn btn-green mt-btn">Conoce los programas</a>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       PALMARÉS / JUGADORES
-  ═══════════════════════════════════════════ -->
-  <section class="section sec-dark" id="jugadores">
-    <div class="container">
-
-      <div class="sec-header sec-header-light">
-        <span class="sec-tag">Palmarés</span>
-        <h2 class="sec-title">Orgullo de <em>Castellón</em></h2>
-        <p class="sec-sub">La Plana Sport ha sido la cuna de algunos de los mejores tenistas de la provincia. Estos son algunos de nuestros campeones más destacados.</p>
-      </div>
-
-      <div class="jugadores-grid">
-
-        <div class="jugador-card reveal">
-          <div class="jug-avatar">
-            <span>CH</span>
-            <div class="jug-badge">ATP Top 200</div>
+        <div class="about-visual reveal">
+          <div class="about-card-main">
+            <div class="acm-icon"><i class="fas fa-circle"></i></div>
+            <h3>La Plana Sport Castellón</h3>
+            <p>El mayor complejo deportivo de Castellón con tenis, pádel, piscina, gimnasio y restaurante en un único espacio.</p>
           </div>
-          <div class="jug-info">
-            <h3>Carlos Herrero</h3>
-            <span class="jug-years">Nacido en 1980 · En el club desde 1988</span>
-            <p>Mejor ranking ATP alcanzado: <strong>#178</strong>. Campeón de España Juvenil (1998). Representó a España en la Davis Cup Sub-21. Hoy es el director técnico de nuestra academia de alto rendimiento.</p>
-            <div class="jug-logros">
-              <span><i class="fas fa-trophy"></i> Campeón España Juvenil '98</span>
-              <span><i class="fas fa-star"></i> ATP #178</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="jugador-card reveal">
-          <div class="jug-avatar">
-            <span>MF</span>
-            <div class="jug-badge">WTA Tour</div>
-          </div>
-          <div class="jug-info">
-            <h3>María Fernández Soler</h3>
-            <span class="jug-years">Nacida en 1987 · En el club desde 1993</span>
-            <p>Tres veces campeona autonómica. Alcanzó el <strong>top 250 de la WTA</strong>. Participante en el qualifying de Roland Garros (2009 y 2011). Hoy comparte su talento como entrenadora de alta competición.</p>
-            <div class="jug-logros">
-              <span><i class="fas fa-trophy"></i> 3× Campeona Autonómica</span>
-              <span><i class="fas fa-star"></i> WTA Top 250</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="jugador-card reveal">
-          <div class="jug-avatar">
-            <span>PA</span>
-            <div class="jug-badge">ITF Pro</div>
-          </div>
-          <div class="jug-info">
-            <h3>Pedro Almela García</h3>
-            <span class="jug-years">Nacido en 1993 · En el club desde 2000</span>
-            <p>Seis títulos ITF Futures. Vencedor del torneo internacional de Castellón (2016). Especialista en tierra batida, ha competido en torneos Challenger por toda Europa y Sudamérica.</p>
-            <div class="jug-logros">
-              <span><i class="fas fa-trophy"></i> 6 títulos ITF Futures</span>
-              <span><i class="fas fa-star"></i> Challenger Circuit</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="jugador-card jugador-activa reveal">
-          <div class="jug-avatar">
-            <span>LM</span>
-            <div class="jug-badge jug-badge-active">Activa</div>
-          </div>
-          <div class="jug-info">
-            <h3>Lucía Morales Vidal</h3>
-            <span class="jug-years">Nacida en 2002 · En el club desde 2007</span>
-            <p>La gran promesa del tenis castellonense. Actualmente activa en el circuito ITF y WTA 125. Campeona nacional sub-18 (2019) y sub-21 (2022). El futuro del tenis español lleva el nombre de Castellón.</p>
-            <div class="jug-logros">
-              <span><i class="fas fa-trophy"></i> 2× Campeona Nacional</span>
-              <span><i class="fas fa-star"></i> WTA 125 – En activo</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       ESCUELA DE TENIS
-  ═══════════════════════════════════════════ -->
-  <section class="section sec-light" id="escuela">
-    <div class="container">
-
-      <div class="sec-header">
-        <span class="sec-tag">Escuela de Tenis</span>
-        <h2 class="sec-title">Formamos <em>campeones</em>,<br>creamos <em>pasión</em></h2>
-        <p class="sec-sub">Nuestra escuela combina la metodología más avanzada con entrenadores de élite para desarrollar el potencial de cada jugador, sea cual sea su nivel o edad.</p>
-      </div>
-
-      <div class="programas-grid">
-
-        <div class="programa-card reveal">
-          <div class="prog-icon"><i class="fas fa-baby"></i></div>
-          <h3>Bebé Tenis</h3>
-          <span class="prog-edad">3 – 6 años</span>
-          <p>Iniciación al tenis a través del juego y actividades motrices. Coordinación, equilibrio y amor por el deporte desde las primeras edades.</p>
-          <div class="prog-precio">
-            <span class="pp-desde">Desde</span>
-            <span class="pp-num">40€</span>
-            <span class="pp-period">/mes</span>
-          </div>
-        </div>
-
-        <div class="programa-card reveal">
-          <div class="prog-icon"><i class="fas fa-child"></i></div>
-          <h3>Mini Tenis</h3>
-          <span class="prog-edad">6 – 10 años</span>
-          <p>Técnica básica en pistas adaptadas con pelotas de baja presión. Metodología de la ITF adaptada a la edad.</p>
-          <div class="prog-precio">
-            <span class="pp-desde">Desde</span>
-            <span class="pp-num">50€</span>
-            <span class="pp-period">/mes</span>
-          </div>
-        </div>
-
-        <div class="programa-card reveal">
-          <div class="prog-icon"><i class="fas fa-running"></i></div>
-          <h3>Infantil &amp; Juvenil</h3>
-          <span class="prog-edad">10 – 18 años</span>
-          <p>Técnica, táctica y preparación física. Competición federada por equipos a nivel provincial y autonómico.</p>
-          <div class="prog-precio">
-            <span class="pp-desde">Desde</span>
-            <span class="pp-num">65€</span>
-            <span class="pp-period">/mes</span>
-          </div>
-        </div>
-
-        <div class="programa-card reveal">
-          <div class="prog-icon"><i class="fas fa-user"></i></div>
-          <h3>Adultos</h3>
-          <span class="prog-edad">Todos los niveles</span>
-          <p>Grupos reducidos (máx. 4 alumnos) en horarios flexibles: iniciación, intermedio y avanzado. Tenis para disfrutar.</p>
-          <div class="prog-precio">
-            <span class="pp-desde">Desde</span>
-            <span class="pp-num">55€</span>
-            <span class="pp-period">/mes</span>
-          </div>
-        </div>
-
-        <div class="programa-card prog-highlight reveal">
-          <div class="prog-icon"><i class="fas fa-medal"></i></div>
-          <h3>Alta Competición</h3>
-          <span class="prog-edad">Por selección</span>
-          <p>Programa intensivo para jugadores con proyección competitiva. Entrenamiento diario, nutrición y psicología deportiva. La élite del tenis valenciano.</p>
-          <div class="prog-precio">
-            <span class="pp-desde">Consultar</span>
-            <span class="pp-num">tarifas</span>
-          </div>
-        </div>
-
-        <div class="programa-card reveal">
-          <div class="prog-icon"><i class="fas fa-user-tie"></i></div>
-          <h3>Clases Particulares</h3>
-          <span class="prog-edad">Todos los niveles</span>
-          <p>Atención personalizada con entrenadores titulados RFET. Progresión acelerada y trabajo específico en los aspectos a mejorar.</p>
-          <div class="prog-precio">
-            <span class="pp-num">45€</span>
-            <span class="pp-period">/hora</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="escuela-extras">
-
-        <div class="campus-card reveal">
-          <div class="campus-icon"><i class="fas fa-sun"></i></div>
-          <div>
-            <h3>Campus de Verano</h3>
-            <p>Del 23 de junio al 25 de julio. Inmersión total en el tenis con jugadores de toda España. Turnos de 1 o 2 semanas. Plazas limitadas.</p>
-            <div class="campus-precio">190 € / semana</div>
-            <a href="#contacto" class="btn btn-gold btn-sm">Reservar plaza</a>
-          </div>
-        </div>
-
-        <div class="entrenadores-card reveal">
-          <h3>Nuestro Equipo Técnico</h3>
-          <div class="entrenadores-list">
-            <div class="entrenador-item">
-              <div class="ent-avatar">CH</div>
-              <div>
-                <strong>Carlos Herrero</strong>
-                <span>Director Técnico · Ex-ATP #178</span>
-              </div>
-            </div>
-            <div class="entrenador-item">
-              <div class="ent-avatar">MF</div>
-              <div>
-                <strong>María Fernández</strong>
-                <span>Alta Competición · Ex-WTA</span>
-              </div>
-            </div>
-            <div class="entrenador-item">
-              <div class="ent-avatar">JB</div>
-              <div>
-                <strong>Jordi Balaguer</strong>
-                <span>Entrenador Nacional Nivel 3 · RFET</span>
-              </div>
-            </div>
-            <div class="entrenador-item">
-              <div class="ent-avatar">AR</div>
-              <div>
-                <strong>Ana Ríos</strong>
-                <span>Preparadora Física especializada</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       INSTALACIONES
-  ═══════════════════════════════════════════ -->
-  <section class="section sec-dark" id="instalaciones">
-    <div class="container">
-
-      <div class="sec-header sec-header-light">
-        <span class="sec-tag">Instalaciones</span>
-        <h2 class="sec-title">Infraestructura de <em>primer nivel</em></h2>
-        <p class="sec-sub">Nuestras instalaciones están a la altura de las mejores academias europeas, diseñadas para entrenar y disfrutar del tenis en las mejores condiciones posibles.</p>
-      </div>
-
-      <div class="inst-grid">
-
-        <div class="inst-card inst-card-xl reveal">
-          <div class="inst-icon"><i class="fas fa-circle"></i></div>
-          <h3>10 Pistas de Tenis</h3>
-          <p>6 pistas de tierra batida, 2 de pista rápida y 2 cubiertas climatizadas. Iluminación LED de alta eficiencia para jugar de noche durante todo el año.</p>
-          <div class="inst-tags">
-            <span>Tierra Batida ×6</span>
-            <span>Pista Rápida ×2</span>
-            <span>Cubiertas ×2</span>
-            <span>Iluminación LED</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-water"></i></div>
-          <h3>Piscina 25m</h3>
-          <p>Exterior, abierta de junio a septiembre. Zona de chapoteo para los más pequeños y servicio de socorristas certificados.</p>
-          <div class="inst-tags">
-            <span>25 metros</span>
-            <span>Jun – Sep</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-dumbbell"></i></div>
-          <h3>Gimnasio Profesional</h3>
-          <p>Más de 400 m² con maquinaria Technogym. Área de pesas libres, cardio y zona funcional específica para tenistas.</p>
-          <div class="inst-tags">
-            <span>400 m²</span>
-            <span>Technogym</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-spa"></i></div>
-          <h3>Spa &amp; Wellness</h3>
-          <p>Zona de recuperación con sauna finlandesa, baño de vapor, jacuzzi y área de relajación. El complemento perfecto para el deportista exigente.</p>
-          <div class="inst-tags">
-            <span>Sauna</span>
-            <span>Jacuzzi</span>
-            <span>Vapor</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-shower"></i></div>
-          <h3>Vestuarios Premium</h3>
-          <p>Taquillas individuales de seguridad, duchas de alto caudal, zona de secado y amenities de calidad. Diferenciados y accesibles.</p>
-          <div class="inst-tags">
-            <span>H &amp; M</span>
-            <span>Accesible</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-store"></i></div>
-          <h3>Pro Shop</h3>
-          <p>Tienda especializada con Wilson, Babolat, Head, Nike y Adidas. Servicio de encordado profesional en 24 horas.</p>
-          <div class="inst-tags">
-            <span>Wilson · Babolat</span>
-            <span>Encordado</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-parking"></i></div>
-          <h3>Parking Gratuito</h3>
-          <p>Aparcamiento privado para socios con 200 plazas. Vigilado 24 horas con sistema de videovigilancia de última generación.</p>
-          <div class="inst-tags">
-            <span>200 plazas</span>
-            <span>Gratuito</span>
-            <span>Vigilado</span>
-          </div>
-        </div>
-
-        <div class="inst-card reveal">
-          <div class="inst-icon"><i class="fas fa-wifi"></i></div>
-          <h3>Conectividad Total</h3>
-          <p>WiFi 6 en todas las instalaciones. App del club para reservas de pistas, inscripción a clases y resultados en tiempo real.</p>
-          <div class="inst-tags">
-            <span>WiFi 6</span>
-            <span>App Móvil</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       RESTAURANTE
-  ═══════════════════════════════════════════ -->
-  <section class="section sec-light" id="restaurante">
-    <div class="container">
-
-      <div class="sec-header">
-        <span class="sec-tag">Restaurante</span>
-        <h2 class="sec-title">La cocina mediterránea<br>en su <em>máxima expresión</em></h2>
-        <p class="sec-sub">Producto local, recetas de temporada y una selección de vinos valencianos. Nuestro restaurante ofrece lo mejor de la gastronomía castellonense en un ambiente elegante con vistas a las pistas.</p>
-      </div>
-
-      <div class="rest-horario reveal">
-        <div class="hor-item">
-          <i class="fas fa-coffee"></i>
-          <strong>Desayunos</strong>
-          <span>8:00 – 11:30</span>
-        </div>
-        <div class="hor-item">
-          <i class="fas fa-utensils"></i>
-          <strong>Comidas</strong>
-          <span>13:30 – 16:00</span>
-        </div>
-        <div class="hor-item">
-          <i class="fas fa-cookie"></i>
-          <strong>Meriendas</strong>
-          <span>17:00 – 20:00</span>
-        </div>
-        <div class="hor-item">
-          <i class="fas fa-moon"></i>
-          <strong>Cenas</strong>
-          <span>21:00 – 23:30</span>
-        </div>
-        <div class="hor-item">
-          <i class="fas fa-calendar-check"></i>
-          <strong>Abierto</strong>
-          <span>Mar – Dom</span>
-        </div>
-      </div>
-
-      <div class="menu-grid">
-
-        <!-- ENTRANTES -->
-        <div class="menu-col reveal">
-          <div class="menu-col-header">
-            <i class="fas fa-leaf"></i>
-            <h3>Entrantes</h3>
-          </div>
-          <ul class="menu-list">
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Tabla de embutidos ibéricos de bellota</span>
-                <span class="mi-desc">Jamón, chorizo, salchichón y lomo con picos artesanos</span>
-              </div>
-              <span class="mi-price">16 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Croquetas caseras (8 uds.)</span>
-                <span class="mi-desc">De jamón ibérico con bechamel artesanal</span>
-              </div>
-              <span class="mi-price">10 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Ensalada de burrata y tomate de la Plana</span>
-                <span class="mi-desc">Con albahaca fresca, AOVE y reducción de módena</span>
-              </div>
-              <span class="mi-price">13 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Boquerones en vinagre</span>
-                <span class="mi-desc">Con piparra, aceite de oliva virgen y ajo</span>
-              </div>
-              <span class="mi-price">9 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Pulpo a la brasa con parmentier</span>
-                <span class="mi-desc">Con pimentón de La Vera y aceite verde</span>
-              </div>
-              <span class="mi-price">18 €</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- PLATOS PRINCIPALES -->
-        <div class="menu-col reveal">
-          <div class="menu-col-header">
-            <i class="fas fa-drumstick-bite"></i>
-            <h3>Platos Principales</h3>
-          </div>
-          <ul class="menu-list">
-            <li class="mi-destacado">
-              <div class="mi-info">
-                <span class="mi-name">Paella valenciana <span class="mi-badge">Especialidad</span></span>
-                <span class="mi-desc">Receta tradicional, pollo, conejo, bajoqueta y garrofó (mín. 2 personas)</span>
-              </div>
-              <span class="mi-price">17 € <small>/p.</small></span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Fideuà de mariscos</span>
-                <span class="mi-desc">Gamba roja, calamar, cigala y alioli casero (mín. 2 personas)</span>
-              </div>
-              <span class="mi-price">19 € <small>/p.</small></span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Lubina a la sal</span>
-                <span class="mi-desc">Del Mediterráneo, entera, patatas panadera y limón</span>
-              </div>
-              <span class="mi-price">24 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Solomillo de ternera a la brasa</span>
-                <span class="mi-desc">Reducción de vino tinto, patatas confitadas y verduras</span>
-              </div>
-              <span class="mi-price">26 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Pechuga de pollo de corral</span>
-                <span class="mi-desc">A la plancha con salsa de limón y alcaparras, arroz basmati</span>
-              </div>
-              <span class="mi-price">16 €</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- POSTRES -->
-        <div class="menu-col reveal">
-          <div class="menu-col-header">
-            <i class="fas fa-ice-cream"></i>
-            <h3>Postres</h3>
-          </div>
-          <ul class="menu-list">
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Crema catalana flambeada</span>
-                <span class="mi-desc">Receta tradicional con vainilla de Tahití</span>
-              </div>
-              <span class="mi-price">6 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Tarta de queso San Simón</span>
-                <span class="mi-desc">Con coulis de frutos rojos y galleta de mantequilla</span>
-              </div>
-              <span class="mi-price">7 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Helados artesanos (3 bolas)</span>
-                <span class="mi-desc">Elaboración propia: vainilla, fresa, chocolate, stracciatella</span>
-              </div>
-              <span class="mi-price">5 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Tiramisú de la casa</span>
-                <span class="mi-desc">Con café de especialidad y bizcocho de almendra</span>
-              </div>
-              <span class="mi-price">6 €</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- BEBIDAS -->
-        <div class="menu-col reveal">
-          <div class="menu-col-header">
-            <i class="fas fa-wine-glass-alt"></i>
-            <h3>Bebidas &amp; Vinos</h3>
-          </div>
-          <ul class="menu-list">
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Agua mineral (1 L)</span>
-              </div>
-              <span class="mi-price">2 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Refrescos y zumos naturales</span>
-              </div>
-              <span class="mi-price">3 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Cerveza artesana de Castellón</span>
-              </div>
-              <span class="mi-price">4 €</span>
-            </li>
-            <li class="mi-destacado">
-              <div class="mi-info">
-                <span class="mi-name">Vinos valencianos <span class="mi-badge">Carta</span></span>
-                <span class="mi-desc">DOP Utiel-Requena, Valencia y Alicante</span>
-              </div>
-              <span class="mi-price">desde 14 €</span>
-            </li>
-            <li>
-              <div class="mi-info">
-                <span class="mi-name">Cava y champagne</span>
-                <span class="mi-desc">Caves catalanas y champagnes franceses seleccionados</span>
-              </div>
-              <span class="mi-price">desde 22 €</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="menu-nota reveal">
-        <i class="fas fa-info-circle"></i>
-        <p><strong>Menú del día</strong> (lun – vie): <strong>14 €</strong> · Primer plato + segundo + postre o café + bebida. Precios con IVA incluido. Disponemos de opciones vegetarianas y sin gluten bajo petición. Para reservas de grupo contacta con el restaurante.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       CONTACTO
-  ═══════════════════════════════════════════ -->
-  <section class="section sec-dark" id="contacto">
-    <div class="container">
-
-      <div class="sec-header sec-header-light">
-        <span class="sec-tag">Contacto</span>
-        <h2 class="sec-title">Únete a la <em>familia</em><br>La Plana Sport</h2>
-        <p class="sec-sub">¿Tienes alguna pregunta o quieres hacerte socio? Estamos encantados de atenderte.</p>
-      </div>
-
-      <div class="contacto-grid">
-
-        <div class="contacto-info reveal">
-          <div class="ci-block">
+          <div class="about-card-sub ac1">
             <i class="fas fa-map-marker-alt"></i>
             <div>
               <strong>Dirección</strong>
-              <span>Avda. del Mar, 45 · 12100 Castellón de la Plana</span>
+              <span>Avda. Hermanos Bou, 242<br>12003 Castellón de la Plana</span>
             </div>
           </div>
-          <div class="ci-block">
+          <div class="about-card-sub ac2">
             <i class="fas fa-phone"></i>
             <div>
               <strong>Teléfono</strong>
-              <span>964 123 456</span>
+              <span>964 22 30 46<br>686 948 803</span>
             </div>
           </div>
-          <div class="ci-block">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Email</strong>
-              <span>info@laplanasport.es</span>
-            </div>
-          </div>
-          <div class="ci-block">
+          <div class="about-card-sub ac3">
             <i class="fas fa-clock"></i>
             <div>
-              <strong>Horario del Club</strong>
-              <span>Lun – Vie: 8:00 – 23:00<br>Sáb – Dom: 8:00 – 22:00</span>
+              <strong>Horario</strong>
+              <span>Lun – Dom: 8:00 – 23:00</span>
             </div>
-          </div>
-
-          <div class="cuotas-box">
-            <h3>Cuotas de Socio 2025</h3>
-            <div class="cuota-row">
-              <span>Socio individual</span>
-              <strong>60 €/mes</strong>
-            </div>
-            <div class="cuota-row">
-              <span>Socio familiar (hasta 4)</span>
-              <strong>95 €/mes</strong>
-            </div>
-            <div class="cuota-row">
-              <span>Socio juvenil (hasta 18 años)</span>
-              <strong>30 €/mes</strong>
-            </div>
-            <div class="cuota-row">
-              <span>Matrícula (única)</span>
-              <strong>50 €</strong>
-            </div>
-            <p class="cuota-nota">* Escuela de tenis con precio adicional a la cuota de socio.</p>
-          </div>
-
-          <div class="redes">
-            <a href="#" class="red-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="red-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="red-link" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" class="red-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
-        <form class="contacto-form reveal" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       PROGRAMAS
+  ════════════════════════════════ -->
+  <section class="section s-gray" id="programas">
+    <div class="container">
+      <div class="sec-head center">
+        <span class="eyebrow">Oferta de Cursos</span>
+        <h2>Programas diseñados<br>para <em>cada jugador</em></h2>
+        <p class="sec-sub">Desde los primeros pasos hasta la alta competición. Nuestros programas están estructurados con metodología progresiva para maximizar el desarrollo de cada alumno.</p>
+      </div>
+
+      <div class="prog-grid">
+
+        <div class="prog-card reveal">
+          <div class="pc-top">
+            <div class="pc-icon pc-icon-1"><i class="fas fa-baby"></i></div>
+            <div class="pc-age">3 – 8 años</div>
+          </div>
+          <h3>Minitenis</h3>
+          <p>El punto de entrada al tenis para los más pequeños. A través del juego y actividades adaptadas a su edad, los niños desarrollan coordinación, equilibrio y habilidades motrices mientras se familiarizan con la raqueta en un entorno divertido y seguro.</p>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Pistas y material adaptados</li>
+            <li><i class="fas fa-check"></i> Pelotas de baja presión</li>
+            <li><i class="fas fa-check"></i> Grupos máx. 6 alumnos</li>
+            <li><i class="fas fa-check"></i> 2 sesiones/semana</li>
+          </ul>
+        </div>
+
+        <div class="prog-card reveal">
+          <div class="pc-top">
+            <div class="pc-icon pc-icon-2"><i class="fas fa-child"></i></div>
+            <div class="pc-age">8 – 14 años</div>
+          </div>
+          <h3>Escuela de Tenis</h3>
+          <p>Programa base para niños y adolescentes que aprenden la técnica correcta desde el principio. Trabajo de todos los golpes, táctica elemental y espíritu competitivo en un ambiente motivador.</p>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Técnica completa de base</li>
+            <li><i class="fas fa-check"></i> Partidos y juego libre</li>
+            <li><i class="fas fa-check"></i> Grupos por nivel</li>
+            <li><i class="fas fa-check"></i> 2–3 sesiones/semana</li>
+          </ul>
+        </div>
+
+        <div class="prog-card reveal">
+          <div class="pc-top">
+            <div class="pc-icon pc-icon-3"><i class="fas fa-user"></i></div>
+            <div class="pc-age">Adultos · Todos los niveles</div>
+          </div>
+          <h3>Tenis Adultos</h3>
+          <p>Grupos reducidos clasificados por nivel para adultos que quieren aprender, mejorar o simplemente disfrutar del tenis. Horarios flexibles adaptados a la vida laboral y familiar.</p>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Iniciación, medio y avanzado</li>
+            <li><i class="fas fa-check"></i> Horarios de mañana y tarde</li>
+            <li><i class="fas fa-check"></i> Grupos máx. 4 alumnos</li>
+            <li><i class="fas fa-check"></i> 2 sesiones/semana</li>
+          </ul>
+        </div>
+
+        <div class="prog-card reveal">
+          <div class="pc-top">
+            <div class="pc-icon pc-icon-4"><i class="fas fa-chart-line"></i></div>
+            <div class="pc-age">Juvenil y adulto · Base sólida</div>
+          </div>
+          <h3>Perfeccionamiento</h3>
+          <p>Para jugadores con base técnica consolidada que quieren llevar su juego al siguiente nivel. Entrenamiento técnico, táctico y físico específico para tenis, con análisis de vídeo y planes personalizados.</p>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Análisis técnico-táctico</li>
+            <li><i class="fas fa-check"></i> Preparación física específica</li>
+            <li><i class="fas fa-check"></i> Grupos máx. 4 alumnos</li>
+            <li><i class="fas fa-check"></i> 3 sesiones/semana</li>
+          </ul>
+        </div>
+
+        <div class="prog-card reveal">
+          <div class="pc-top">
+            <div class="pc-icon pc-icon-5"><i class="fas fa-medal"></i></div>
+            <div class="pc-age">Juvenil · Técnica dominada</div>
+          </div>
+          <h3>Precompetición</h3>
+          <p>Dirigido a jóvenes que dominan la técnica y quieren dar el salto al mundo de la competición. Combina entrenamiento técnico-táctico con preparación mental y física para afrontar los primeros torneos con garantías.</p>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Entrenamiento de torneos</li>
+            <li><i class="fas fa-check"></i> Psicología deportiva</li>
+            <li><i class="fas fa-check"></i> Seguimiento individualizado</li>
+            <li><i class="fas fa-check"></i> 4 sesiones/semana</li>
+          </ul>
+        </div>
+
+        <div class="prog-card prog-card-dark reveal">
+          <div class="pc-top">
+            <div class="pc-icon pc-icon-6"><i class="fas fa-trophy"></i></div>
+            <div class="pc-age">Selección · Alta intensidad</div>
+          </div>
+          <h3>Competición</h3>
+          <p>El programa más exigente de la academia, para jugadores que compiten en el circuito federado. Entrenamiento diario, preparación física intensiva, nutrición deportiva y participación en torneos nacionales e internacionales.</p>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Entrenamiento diario</li>
+            <li><i class="fas fa-check"></i> Nutrición y psicología</li>
+            <li><i class="fas fa-check"></i> Circuito RFET y torneos ITF</li>
+            <li><i class="fas fa-check"></i> Seguimiento 360°</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="prog-extra reveal">
+        <div class="pe-item">
+          <div class="pe-icon"><i class="fas fa-user-tie"></i></div>
+          <div>
+            <h4>Clases Particulares</h4>
+            <p>Atención 100% personalizada con cualquiera de nuestros entrenadores. Progresión rápida y trabajo específico en las áreas a mejorar.</p>
+          </div>
+        </div>
+        <div class="pe-item">
+          <div class="pe-icon"><i class="fas fa-sun"></i></div>
+          <div>
+            <h4>Campus de Verano</h4>
+            <p>Inmersión total en el tenis durante el verano. Turnos semanales para jugadores de todos los niveles. Plazas muy limitadas.</p>
+          </div>
+        </div>
+        <div class="pe-item">
+          <div class="pe-icon"><i class="fas fa-volleyball-ball"></i></div>
+          <div>
+            <h4>Pádel y Otros Deportes</h4>
+            <p>La Plana Sport ofrece también escuela de pádel y otras actividades en sus 9 pistas de pádel y frontón.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       PRECIOS
+  ════════════════════════════════ -->
+  <section class="section s-dark" id="precios">
+    <div class="container">
+      <div class="sec-head center sec-head-light">
+        <span class="eyebrow eyebrow-light">Tarifas</span>
+        <h2>Invierte en tu <em>nivel</em></h2>
+        <p class="sec-sub sec-sub-light">Planes claros y sin sorpresas. Elige el programa que mejor se adapta a tus objetivos y contacta con nosotros para confirmar disponibilidad y precio exacto.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="price-card reveal">
+          <div class="price-label">Iniciación</div>
+          <div class="price-amount">
+            <span class="pa-from">Desde</span>
+            <span class="pa-num">2</span>
+            <span class="pa-unit">días/sem</span>
+          </div>
+          <p class="price-desc">Para niños y adultos que empiezan o quieren jugar al tenis de forma regular sin presión competitiva.</p>
+          <ul class="price-list">
+            <li><i class="fas fa-check"></i> Minitenis o Escuela de Tenis</li>
+            <li><i class="fas fa-check"></i> Tenis Adultos todos los niveles</li>
+            <li><i class="fas fa-check"></i> 2 sesiones de 60 min/semana</li>
+            <li><i class="fas fa-check"></i> Grupos reducidos (máx. 4–6)</li>
+            <li><i class="fas fa-check"></i> Material incluido</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline-green">Solicitar información</a>
+        </div>
+
+        <div class="price-card price-card-featured reveal">
+          <div class="price-badge">Más popular</div>
+          <div class="price-label">Perfeccionamiento</div>
+          <div class="price-amount">
+            <span class="pa-from">Desde</span>
+            <span class="pa-num">3</span>
+            <span class="pa-unit">días/sem</span>
+          </div>
+          <p class="price-desc">Para jugadores que quieren mejorar su nivel técnico y táctico de forma estructurada y consistente.</p>
+          <ul class="price-list">
+            <li><i class="fas fa-check"></i> Perfeccionamiento o Precompetición</li>
+            <li><i class="fas fa-check"></i> 3 sesiones de 90 min/semana</li>
+            <li><i class="fas fa-check"></i> Plan de entrenamiento personalizado</li>
+            <li><i class="fas fa-check"></i> Grupos máx. 4 alumnos</li>
+            <li><i class="fas fa-check"></i> Acceso a torneos internos</li>
+          </ul>
+          <a href="#contacto" class="btn btn-green">Solicitar información</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-label">Competición Élite</div>
+          <div class="price-amount">
+            <span class="pa-from">Programa</span>
+            <span class="pa-num">full</span>
+            <span class="pa-unit">time</span>
+          </div>
+          <p class="price-desc">Para jugadores con vocación competitiva que quieren un programa profesional de alta intensidad.</p>
+          <ul class="price-list">
+            <li><i class="fas fa-check"></i> Programa de Competición completo</li>
+            <li><i class="fas fa-check"></i> Entrenamiento diario (5 días)</li>
+            <li><i class="fas fa-check"></i> Preparación física + nutrición</li>
+            <li><i class="fas fa-check"></i> Psicología deportiva</li>
+            <li><i class="fas fa-check"></i> Torneos RFET e ITF</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline-white">Solicitar información</a>
+        </div>
+
+      </div>
+
+      <div class="pricing-note reveal">
+        <i class="fas fa-info-circle"></i>
+        <p>Los precios exactos varían según edad, nivel y temporada. Contacta con nosotros para recibir una propuesta personalizada sin compromiso. También ofrecemos <strong>clases particulares</strong> y <strong>bonos de sesiones</strong>.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       POR QUÉ ELEGIRNOS
+  ════════════════════════════════ -->
+  <section class="section s-light" id="porque">
+    <div class="container">
+      <div class="sec-head center">
+        <span class="eyebrow">¿Por qué La Plana?</span>
+        <h2>La diferencia que<br>se siente en <em>pista</em></h2>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-item reveal">
+          <div class="wi-icon"><i class="fas fa-circle"></i></div>
+          <h3>14 Pistas de Tenis</h3>
+          <p>Tierra batida y pista rápida. Disponibilidad garantizada para entrenar y competir sin esperas, con iluminación LED para jugar de noche.</p>
+        </div>
+
+        <div class="why-item reveal">
+          <div class="wi-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Entrenadores de Élite</h3>
+          <p>Equipo técnico titulado por la RFET con experiencia en el circuito profesional. Formación continua y metodología basada en evidencia.</p>
+        </div>
+
+        <div class="why-item reveal">
+          <div class="wi-icon"><i class="fas fa-users-cog"></i></div>
+          <h3>Grupos Reducidos</h3>
+          <p>Máximo 4–6 alumnos por grupo para garantizar atención personalizada y progresión real. No somos una fábrica, somos una academia.</p>
+        </div>
+
+        <div class="why-item reveal">
+          <div class="wi-icon"><i class="fas fa-child"></i></div>
+          <h3>Para Todas las Edades</h3>
+          <p>Desde minitenis para niños de 3 años hasta programas para adultos mayores. Una academia para toda la familia.</p>
+        </div>
+
+        <div class="why-item reveal">
+          <div class="wi-icon"><i class="fas fa-building"></i></div>
+          <h3>Instalaciones Completas</h3>
+          <p>Piscina, gimnasio, sauna, restaurante, parking privado y tienda. Todo lo que necesitas en un solo espacio.</p>
+        </div>
+
+        <div class="why-item reveal">
+          <div class="wi-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Filosofía Competitiva</h3>
+          <p>Acceso a torneos internos, circuito RFET y apoyo para la participación en competiciones nacionales e internacionales.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       INSTALACIONES
+  ════════════════════════════════ -->
+  <section class="section s-gray" id="instalaciones">
+    <div class="container">
+      <div class="sec-head center">
+        <span class="eyebrow">Instalaciones</span>
+        <h2>Un complejo deportivo<br><em>sin igual</em> en Castellón</h2>
+        <p class="sec-sub">La Plana Sport Castellón es mucho más que una academia de tenis. Es un complejo deportivo y social de referencia en la ciudad.</p>
+      </div>
+
+      <div class="inst-bento">
+
+        <div class="ib-card ib-large reveal">
+          <div class="ib-icon"><i class="fas fa-circle"></i></div>
+          <div class="ib-content">
+            <h3>14 Pistas de Tenis</h3>
+            <p>Tierra batida y pista rápida, interiores y exteriores, con iluminación LED de alta eficiencia para jugar en cualquier condición.</p>
+            <div class="ib-tags">
+              <span>Tierra batida</span><span>Pista rápida</span><span>Interiores</span><span>Iluminación LED</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ib-card reveal">
+          <div class="ib-icon"><i class="fas fa-table-tennis"></i></div>
+          <div class="ib-content">
+            <h3>9 Pistas de Pádel</h3>
+            <p>Pistas de pádel en perfectas condiciones con opción de reserva online.</p>
+          </div>
+        </div>
+
+        <div class="ib-card reveal">
+          <div class="ib-icon"><i class="fas fa-water"></i></div>
+          <div class="ib-content">
+            <h3>Piscinas</h3>
+            <p>Piscina para adultos e infantil abiertas en temporada de verano.</p>
+          </div>
+        </div>
+
+        <div class="ib-card reveal">
+          <div class="ib-icon"><i class="fas fa-dumbbell"></i></div>
+          <div class="ib-content">
+            <h3>Gimnasio + Sauna</h3>
+            <p>Sala de fitness equipada y zona de recuperación con sauna finlandesa.</p>
+          </div>
+        </div>
+
+        <div class="ib-card reveal">
+          <div class="ib-icon"><i class="fas fa-utensils"></i></div>
+          <div class="ib-content">
+            <h3>Club Social y Restaurante</h3>
+            <p>Espacio para socializar con cocina mediterránea y carta de bebidas.</p>
+          </div>
+        </div>
+
+        <div class="ib-card reveal">
+          <div class="ib-icon"><i class="fas fa-parking"></i></div>
+          <div class="ib-content">
+            <h3>Parking Privado</h3>
+            <p>Aparcamiento privado gratuito para socios y usuarios de la academia.</p>
+          </div>
+        </div>
+
+        <div class="ib-card reveal">
+          <div class="ib-icon"><i class="fas fa-futbol"></i></div>
+          <div class="ib-content">
+            <h3>Frontón</h3>
+            <p>Pista de frontón para una alternativa deportiva dentro del complejo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       CTA / CONTACTO
+  ════════════════════════════════ -->
+  <section class="section s-brand" id="contacto">
+    <div class="container">
+      <div class="cta-grid">
+
+        <div class="cta-text reveal">
+          <span class="eyebrow eyebrow-dark">Empieza hoy</span>
+          <h2>¿Listo para dar el<br>primer <em>golpe</em>?</h2>
+          <p>Ponte en contacto con nosotros y te asesoraremos sobre el programa más adecuado para tu nivel y objetivos. Primera consulta sin compromiso.</p>
+          <div class="cta-contacts">
+            <a href="tel:964223046" class="cta-contact-link">
+              <i class="fas fa-phone"></i>
+              <span>964 22 30 46</span>
+            </a>
+            <a href="tel:686948803" class="cta-contact-link">
+              <i class="fas fa-mobile-alt"></i>
+              <span>686 948 803</span>
+            </a>
+            <a href="mailto:laplanasport@tenisdrive.es" class="cta-contact-link">
+              <i class="fas fa-envelope"></i>
+              <span>laplanasport@tenisdrive.es</span>
+            </a>
+            <a href="https://www.instagram.com/laplanasportcst/" target="_blank" rel="noopener" class="cta-contact-link">
+              <i class="fab fa-instagram"></i>
+              <span>@laplanasportcst</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="cta-form reveal" id="contactForm" novalidate>
+          <div class="cf-row">
+            <div class="cf-group">
               <label for="nombre">Nombre *</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              <input type="text" id="nombre" placeholder="Tu nombre" required>
             </div>
-            <div class="form-group">
-              <label for="apellidos">Apellidos *</label>
-              <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="6XX XXX XXX">
+            <div class="cf-group">
+              <label for="telefono">Teléfono *</label>
+              <input type="tel" id="telefono" placeholder="6XX XXX XXX" required>
             </div>
           </div>
-          <div class="form-group">
-            <label for="interes">Me interesa</label>
-            <select id="interes" name="interes">
-              <option value="">Selecciona una opción</option>
-              <option>Hacerme socio</option>
-              <option>Escuela de tenis infantil</option>
-              <option>Escuela de tenis adultos</option>
-              <option>Alta competición</option>
-              <option>Campus de verano</option>
-              <option>Reserva de pistas</option>
-              <option>Restaurante</option>
-              <option>Información general</option>
+          <div class="cf-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="tu@email.com">
+          </div>
+          <div class="cf-group">
+            <label for="programa">Programa de interés</label>
+            <select id="programa">
+              <option value="">Selecciona…</option>
+              <option>Minitenis (3–8 años)</option>
+              <option>Escuela de Tenis (8–14 años)</option>
+              <option>Tenis Adultos</option>
+              <option>Perfeccionamiento</option>
+              <option>Precompetición</option>
+              <option>Competición Élite</option>
+              <option>Clases Particulares</option>
+              <option>Campus de Verano</option>
+              <option>No lo sé todavía</option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="cf-group">
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+            <textarea id="mensaje" rows="3" placeholder="Cuéntanos algo sobre tu nivel, edad o cualquier duda…"></textarea>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" id="privacidad" name="privacidad" required>
-            <label for="privacidad">He leído y acepto la <a href="#">política de privacidad</a></label>
+          <div class="cf-check">
+            <input type="checkbox" id="priv" required>
+            <label for="priv">Acepto la <a href="#">política de privacidad</a></label>
           </div>
-          <button type="submit" class="btn btn-gold btn-full">
-            <i class="fas fa-paper-plane"></i>&nbsp; Enviar mensaje
+          <button type="submit" class="btn btn-dark btn-full">
+            <i class="fas fa-paper-plane"></i>&nbsp; Solicitar información
           </button>
-          <div class="form-success" id="formSuccess">
+          <div class="cf-success" id="cfSuccess">
             <i class="fas fa-check-circle"></i>
-            <span>¡Mensaje enviado! Nos pondremos en contacto contigo en breve.</span>
+            <span>¡Mensaje enviado! Te contactaremos en breve.</span>
           </div>
         </form>
 
@@ -872,71 +603,72 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ════════════════════════════════
        FOOTER
-  ═══════════════════════════════════════════ -->
+  ════════════════════════════════ -->
   <footer class="footer">
     <div class="container">
-
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="#inicio" class="nav-logo footer-logo">
-            <svg class="logo-svg" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
-              <path d="M 6 18 Q 28 8 50 18" fill="none" stroke="#C9A84C" stroke-width="2"/>
-              <path d="M 6 38 Q 28 48 50 38" fill="none" stroke="#C9A84C" stroke-width="2"/>
-              <line x1="28" y1="2" x2="28" y2="54" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
-            </svg>
-            <div class="logo-text">
-              <span class="logo-main">LA PLANA</span>
-              <span class="logo-sub">SPORT</span>
+          <a href="#inicio" class="nav-logo">
+            <div class="logo-svg-wrap" aria-hidden="true">
+              <svg viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <circle cx="36" cy="14" r="6.5" fill="#8DBD1F"/>
+                <path d="M36 21 Q29 34 27 43" stroke="#8DBD1F" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                <path d="M34 27 L19 21 L17 14" stroke="#8DBD1F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="15" cy="11" rx="6.5" ry="4.5" stroke="#8DBD1F" stroke-width="2.5" fill="none"/>
+                <path d="M27 43 L20 56 M27 43 L34 55" stroke="#8DBD1F" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                <text x="54" y="26" font-family="Montserrat,sans-serif" font-weight="800" font-size="18" fill="white" letter-spacing="-0.3">La Plana</text>
+                <text x="54" y="40" font-family="Montserrat,sans-serif" font-weight="700" font-size="13" fill="white">sport</text>
+                <text x="54" y="52" font-family="Montserrat,sans-serif" font-weight="500" font-size="8.5" fill="#777" letter-spacing="2">CASTELLÓN</text>
+              </svg>
             </div>
           </a>
-          <p>Club de Tenis de Alto Nivel<br>Castellón de la Plana · Desde 1985</p>
-          <div class="footer-award">
-            <i class="fas fa-award"></i>
-            <span>Club del Año · FTCV 2015</span>
+          <p>La academia de tenis de referencia en Castellón de la Plana. Programas para todas las edades y niveles en el mejor complejo deportivo de la provincia.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/laplanasportcst/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>El Club</h4>
+          <h4>Academia</h4>
           <ul>
-            <li><a href="#historia">Historia</a></li>
-            <li><a href="#jugadores">Palmarés</a></li>
+            <li><a href="#academia">Sobre la Academia</a></li>
+            <li><a href="#programas">Programas</a></li>
+            <li><a href="#precios">Precios</a></li>
             <li><a href="#instalaciones">Instalaciones</a></li>
-            <li><a href="#contacto">Hazte Socio</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Servicios</h4>
+          <h4>Programas</h4>
           <ul>
-            <li><a href="#escuela">Escuela de Tenis</a></li>
-            <li><a href="#escuela">Campus de Verano</a></li>
-            <li><a href="#restaurante">Restaurante</a></li>
-            <li><a href="#instalaciones">Pro Shop</a></li>
+            <li><a href="#programas">Minitenis</a></li>
+            <li><a href="#programas">Escuela de Tenis</a></li>
+            <li><a href="#programas">Adultos</a></li>
+            <li><a href="#programas">Competición</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Contacto</h4>
           <ul>
-            <li><a href="#">Política de Privacidad</a></li>
-            <li><a href="#">Aviso Legal</a></li>
-            <li><a href="#">Reglamento del Club</a></li>
-            <li><a href="#">Torneos</a></li>
+            <li><a href="tel:964223046">964 22 30 46</a></li>
+            <li><a href="tel:686948803">686 948 803</a></li>
+            <li><a href="mailto:laplanasport@tenisdrive.es">laplanasport@tenisdrive.es</a></li>
+            <li class="footer-addr">Avda. Hermanos Bou, 242<br>12003 Castellón</li>
           </ul>
         </div>
 
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2025 La Plana Sport. Todos los derechos reservados.</span>
-        <span>Castellón de la Plana · España</span>
+        <span>&copy; 2025 La Plana Tennis Academy · La Plana Sport Castellón</span>
+        <span>Todos los derechos reservados</span>
       </div>
-
     </div>
   </footer>
 
